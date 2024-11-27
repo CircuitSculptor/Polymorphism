@@ -1,6 +1,7 @@
 package ie.atu.productv4;
 
 import java.util.Scanner;
+import ie.atu.productv3.Product;
 
 public class ProductApp {
 
@@ -15,14 +16,15 @@ public class ProductApp {
         while (choice.equalsIgnoreCase("y")) {
             System.out.print("Enter product code: ");
             String productCode = sc.nextLine();  // read the product code
+
             // The customer could either enter a book code 'java' or software code 'studios' meaning that
             // either a book object or a software object could be returned from the ProductDb class.
             // We need to update the code so that we can handle either type of object returned.
 
-            // Book or a Software Object? = ProductDB.getProduct(productCode);
+            Product p = ProductDB.getProduct(productCode);
 
             // display the output
-            /*
+
             System.out.println();
             if (p != null) {
                 System.out.println("Description: " + p.toString());
@@ -38,7 +40,7 @@ public class ProductApp {
             System.out.print("Continue? (y/n): ");
             choice = sc.nextLine();
             System.out.println();
-            */
+
         }
     }
 }

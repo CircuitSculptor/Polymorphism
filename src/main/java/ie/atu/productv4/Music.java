@@ -23,7 +23,8 @@ public class Music extends Product {
 
     @Override
     public String toString() {
-        return super.toString() + "artist='" + artist + '\'' +
-                ", label='" + label;
+        return super.toString() +
+                "\nArtist:      " + artist +
+                "\nLabel:       " + label;
     }
 }
