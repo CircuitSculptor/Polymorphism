@@ -1,20 +1,20 @@
 package ie.atu.productv4;
 
 import ie.atu.productv4.Product;
-public class TV {
+public class TV extends Product {
 
-    private String screenSize;
+    private double screenSize;
     private String manufacturer;
 
     public TV() {
         super();
-        screenSize = "";
+        screenSize = 0;
         manufacturer = "";
     }
 
-    public String getScreenSize() { return screenSize; }
+    public double getScreenSize() { return screenSize; }
 
-    public void setScreenSize(String screenSize) { this.screenSize = screenSize; }
+    public void setScreenSize(double screenSize) { this.screenSize = screenSize; }
 
     public String getManufacturer() { return manufacturer; }
 
@@ -22,7 +22,8 @@ public class TV {
 
     @Override
     public String toString() {
-        return super.toString() + "screenSize='" + screenSize + '\'' +
-                ", manufacturer='" + manufacturer;
+        return super.toString() +
+                "\nScreen Size:     " + screenSize +
+                "\nManufacturer:    " + manufacturer;
     }
 }
