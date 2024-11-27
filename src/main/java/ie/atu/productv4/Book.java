@@ -1,6 +1,6 @@
 package ie.atu.productv4;
 
-import ie.atu.productv3.Product;
+//import ie.atu.productv3.Product;
 
 public class Book extends Product {
 
@@ -22,6 +22,6 @@ public class Book extends Product {
 
     @Override
     public String toString() {
-        return super.toString() + " by " + author;
+        return super.toString() + "\nAuthor:      " + author;
     }
 }

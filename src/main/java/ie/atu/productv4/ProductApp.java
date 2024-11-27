@@ -1,23 +1,16 @@
 package ie.atu.productv4;
-
 import java.util.Scanner;
-import ie.atu.productv3.Product;
-
 public class ProductApp {
-
     public static void main(String[] args) {
         // display a welcome message
         System.out.println("Welcome to the Product Viewer");
         System.out.println();
-
-        // perform 1 or more selections
         Scanner sc = new Scanner(System.in);
         String choice = "y";
         while (choice.equalsIgnoreCase("y")) {
             System.out.print("Enter product code: ");
             String productCode = sc.nextLine();  // read the product code
             Product p = ProductDB.getProduct(productCode);
-
             System.out.println();
             if (p != null) {
                 System.out.println("Description: " + p.toString());
@@ -27,8 +20,6 @@ public class ProductApp {
             }
             System.out.println();
             System.out.println("Product count: " + Product.getCount());
-
-            // see if the user wants to continue
             System.out.print("Continue? (y/n): ");
             choice = sc.nextLine();
             System.out.println();
