@@ -7,7 +7,7 @@ public class Product {
     private String code;
     private String description;
     private double price;
-    protected static int count = 0;
+    protected static int count = 1;
 
     public Product() {
     }

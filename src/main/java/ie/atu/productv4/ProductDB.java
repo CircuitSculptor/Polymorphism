@@ -31,9 +31,7 @@ public class ProductDB {
             mySoftware.setPrice(54.50);
             mySoftware.setVersion("Oracle 3.0");
             myProduct = mySoftware;
-        }
-
-        if (productCode.equalsIgnoreCase("java")) {
+        } else if (productCode.equalsIgnoreCase("java")) {
             Book myBook = new Book();
             myBook.setCode(productCode);
             myBook.setDescription("ATU Java Programming");
@@ -54,7 +52,24 @@ public class ProductDB {
             myBook.setPrice(54.50);
             myBook.setAuthor("Jim Lennon");
             myProduct = myBook;
+        } else if (productCode.equalsIgnoreCase("galway girl")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("Popular song in Ireland");
+            myMusic.setPrice(12.99);
+            myMusic.setArtist("Ed Sheeran");
+            myMusic.setLabel("Sony Music Group");
+            myProduct = myMusic;
+        } else if (productCode.equalsIgnoreCase("pink")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("Wish you were here");
+            myMusic.setPrice(10.99);
+            myMusic.setArtist("Pink Floyd");
+            myMusic.setLabel("Warner Music Group");
+            myProduct = myMusic;
         }
+
         /*
         if (productCode.equalsIgnoreCase("kdl43")) {
             TV myTV = new TV();
@@ -73,25 +88,7 @@ public class ProductDB {
             myTV.setManufacturer("TLC");
             myProduct = myTV;
         }
-        */
-
-        if (productCode.equalsIgnoreCase("galway girl")) {
-            Music myMusic = new Music();
-            myMusic.setCode(productCode);
-            myMusic.setDescription("Popular song in Ireland");
-            myMusic.setPrice(12.99);
-            myMusic.setArtist("Ed Sheeran");
-            myMusic.setLabel("Sony Music Group");
-            myProduct = myMusic;
-        } else if (productCode.equalsIgnoreCase("pink")) {
-            Music myMusic = new Music();
-            myMusic.setCode(productCode);
-            myMusic.setDescription("Wish you were here");
-            myMusic.setPrice(12.99);
-            myMusic.setArtist("Pink Floyd");
-            myMusic.setLabel("Warner Music Group");
-            myProduct = myMusic;
-        }
+         */
 
         return myProduct;
     }

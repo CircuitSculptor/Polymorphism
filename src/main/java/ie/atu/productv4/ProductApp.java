@@ -16,14 +16,7 @@ public class ProductApp {
         while (choice.equalsIgnoreCase("y")) {
             System.out.print("Enter product code: ");
             String productCode = sc.nextLine();  // read the product code
-
-            // The customer could either enter a book code 'java' or software code 'studios' meaning that
-            // either a book object or a software object could be returned from the ProductDb class.
-            // We need to update the code so that we can handle either type of object returned.
-
             Product p = ProductDB.getProduct(productCode);
-
-            // display the output
 
             System.out.println();
             if (p != null) {
@@ -32,15 +25,13 @@ public class ProductApp {
             } else {
                 System.out.println("No product matches this product code.");
             }
-
             System.out.println();
-            System.out.println("Product count: " + Product.getCount() + "\n");
+            System.out.println("Product count: " + Product.getCount());
 
             // see if the user wants to continue
             System.out.print("Continue? (y/n): ");
             choice = sc.nextLine();
             System.out.println();
-
         }
     }
 }
