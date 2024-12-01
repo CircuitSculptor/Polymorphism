@@ -69,13 +69,13 @@ public class ProductDB {
             myTV.setScreenSize(43);
             myTV.setManufacturer("Sony");
             myProduct = myTV;
-        } else if (productCode.equalsIgnoreCase("tlc49")) {
+        } else if (productCode.equalsIgnoreCase("tcl49")) {
             TV myTV = new TV();
             myTV.setCode(productCode);
-            myTV.setDescription("Mini LED Smart TV tlc49fw45");
+            myTV.setDescription("Mini LED Smart TV tcl49fw45");
             myTV.setPrice(1149.00);
             myTV.setScreenSize(49);
-            myTV.setManufacturer("TLC");
+            myTV.setManufacturer("TCL");
             myProduct = myTV;
         }
         return myProduct;
